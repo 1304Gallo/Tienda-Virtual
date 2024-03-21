@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<head>
+    <title>Almacen</title>
+</head>
+
+
+{% endblock %}
+
+
+
+{% block body %}
+
+  {% block content %}
+
+      <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h2>Almacen</h2>
+              </div>            
+            </div>
+          </div>
+        </section>
+
+        <section class="content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">            
+                  <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                      <h2>
+                          <i class="fas fa-barcode"></i>
+                          Listado de Productos
+                      </h2>
+                      
+                      <a href="{% url 'crear' %}" class="btn btn-primary btn-flat rounded-pill"><i class="bi bi-plus-lg">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAN1JREFUSEvdljEOgkAQRf8/AhZsYWJiLPQ2XsbGG+iFPIiNndHEgq24gWsgLMHFZZnVDYnUM//9+QMTiMQPE+vDCyiKcgvwQJqNxATJC/Dc5fnsVPV5AVqXDwBziXin9qpUtgoBTKR43aZUVpsfmmA6gHWndek18dUEUQDrRtIsmiAEsGDf4l1YL6LJAV3nkhjb1zQ0wX8Bxnzh4iWPEf0U49AO7gAWUuGm/qZUtny7Re6Sq3NNmiPAtRByJs2+d65dgFDUW+6NKAUgKvPQCWkniM18NOBXkbg6yf8qXnD4oxk20eWaAAAAAElFTkSuQmCC"/>
+                      </i> Nuevo producto</a>
+                  </div>
+                    
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <table id="example1" class="table table-bordered table-striped">
+                        {% block script %}
+                          <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                              $('#example1').DataTable({
+                                "responsive": true,
+                                "lengthChange": false,
+                                "autoWidth": false,
+                                "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+                              });
+                            });
+                          </script>
+                        {% endblock %} 
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Código</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>Fecha de vencimiento</th>
+                                <th>Opciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if object_list %}
+                            {% for p in object_list %}
+                            <tr>
+                                <td class="col-3">{{ p.nombre }}</td>
+                                <td class="col-2">{{ p.codigo }}</td>
+                                <td class="col-1">{{ p.cantidad }}</td>
+                                <td class="col-1">{{ p.precio }}</td>
+                                <td class="col-2">{{ p.fecha_vencimiento }}</td>
+                                <td class="col-1">
+                                    <div class="btn-group">
+                                        <a href="{% url 'eliminar_producto' pk=p.id %}" type="button" class="btn btn-danger btn-xs"><i class="fas fa-trash-alt"></i></a>
+                                    </div>
+                                </td>
+                                <td>
+                            </tr>
+                                {% endfor %}
+                                {% else %}
+                            <tr>
+                                <td colspan="12">No existen productos registrados con ese dato</td>
+                            </tr>
+                            {% endif %}
+                            </tbody>
+                    
+                        </tbody>
+                        <tfoot>
+                            
+                        
+                        </tfoot>
+                      </table>
+                      
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
+              <!-- /.container-fluid -->
+        </section>
+      </section>
+   
+  {% endblock %}
+   
+    
+{% endblock %}   

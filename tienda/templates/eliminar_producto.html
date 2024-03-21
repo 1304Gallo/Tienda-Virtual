@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+{% block content %}
+
+<body class="hold-transition sidebar-mini sidebar-collapse">
+  {% comment %} Carga del archivo CSS dentro del bloque body {% endcomment %}
+  <link rel="stylesheet" href="{% static 'css/eliminar_producto.css' %}">
+  <div class="eliminar_producto-wrapper">
+    <div class="eliminar_producto-card card-default">
+      <div class="card-header">
+        <h3 class="card-title">
+          <h1>
+            <i class="fas fa-barcode"></i>
+            Eliminar Producto
+          </h1>
+        </h3>
+        <div class="card-body">
+          <div class="alert alert-danger">
+            <i class="icon fas fa-ban"></i>
+            <strong>Cuidado</strong>
+            <br>
+            Estas seguro de eliminar el producto: {{ object.nombre }}.
+            <br>
+          </div>
+          <form class="form" method="post" action=".">
+            {% csrf_token %}
+            <a href="{% url 'listar_productos' %}" class="btn btn-danger">
+              <i class="fas fa-save"></i> Cancelar
+            </a>
+            <button type="submit" class="btn btn-primary" value="Eliminar">
+              <i class="fas fa-save"></i> Aceptar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+{% endblock %}
+{% endblock %}

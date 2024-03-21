@@ -1,0 +1,28 @@
+.eliminar_producto-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #F8F9FA;
+}
+
+.eliminar_producto-card {
+  margin: auto;
+}
+
+.eliminar_producto-card .card-header h1 {
+  margin-bottom: 20px;
+}
+
+.eliminar_producto-card .card-body {
+  text-align: center;
+}
+
+.eliminar_producto-card .card-body .form {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.eliminar_producto-card .card-body .form .btn-primary {
+  margin-right: 10px;
+}

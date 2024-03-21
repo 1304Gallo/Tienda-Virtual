@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+{% block content%}
+
+<body class="hold-transition sidebar-mini sidebar-collapse">
+{% comment %} Carga del archivo CSS dentro del bloque body {% endcomment %}
+  <link rel="stylesheet" href="{% static 'css/modificar_producto.css' %}">
+<div class="wrapper">
+    <div class="content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-10">
+                    <div class="card card-primary">
+                        <div class="card-header">
+                            <h3 class="card-title " >
+                                <i class="fas fa-plus"></i> Añadir un nuevo producto
+                            </h3>
+                        </div>
+
+                        <form class="row g-3 modificar_producto-form form-group" method="post" action="." enctype="multipart/form-data">
+                            <div class="card-body">
+                                <div class="row">
+                                    {% csrf_token %}
+                                    <div class="col-md-6">
+                                        <label>Nombre</label>
+                                        {{ form.nombre }}
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label for="{{ form.categoria.id_for_label }}">Categoría</label>
+                                        <select class="form-select" aria-label="Default select example">
+                                            <option selected>Selecciona una categoría</option>
+                                            {% for categoria in categorias %}
+                                              <option value="{{ categoria.id }}">{{ categoria.nombre }}</option>
+                                            {% endfor %}
+                                          </select>
+                                          
+                                    </div>
+                                    
+                                    <div class="col-md-6">
+                                        <label>Cantidad</label>
+                                        {{ form.cantidad }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Codigo</label>
+                                        {{ form.codigo }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Precio</label>
+                                        {{ form.precio }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Fecha de vencimiento</label>
+                                        {{ form.fecha_vencimiento }}
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Foto</label>
+                                        
+                                        {{ form.foto }}
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <input type="submit" class="btn btn-primary" value="Añadir">
+                                <a href="{% url 'listar_productos' %}" class="btn btn-danger">Cancelar</a>
+                            </div>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{% endblock %}
+
+{% endblock %}

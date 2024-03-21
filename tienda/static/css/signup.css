@@ -1,0 +1,33 @@
+<style>
+    /* Estilos personalizados para el formulario de registro */
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 5rem;
+    }
+
+    form {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.7rem;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      border: 1px solid #ced4da;
+      background-color: #fff;
+    }
+    </style>

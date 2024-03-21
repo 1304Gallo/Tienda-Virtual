@@ -1,0 +1,23 @@
+.row .modificar_producto-card {
+   width: 80%;
+  margin: auto;
+  max-width: none;
+}
+
+.modificar_producto-form .form-group {
+  margin-bottom: 50px;
+}
+
+.modificar_producto-form .form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.modificar_producto-form .form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
