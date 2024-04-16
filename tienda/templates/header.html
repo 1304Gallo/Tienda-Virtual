@@ -1,114 +1,124 @@
 {% load static %}
- <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
+<!-- Navbar -->
+<nav class="main-header navbar navbar-expand-md navbar-light navbar-white">
     <div class="container">
-      <a href="{% url 'store' %}" class="navbar-brand">
-        <img src="{% static 'lib/AdminLTE-3.2.0/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Tienda</span>
-      </a>
+        <a href="{% url 'store' %}" class="navbar-brand">
+            <img src="{% static 'lib/AdminLTE-3.2.0/img/AdminLTELogo.png' %}" alt="AdminLTE Logo"
+                 class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light">Tienda</span>
+        </a>
 
-      <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse order-3" id="navbarCollapse">
-        <!-- Left navbar links -->
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Categorías</a>
-            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              
-              <li><a href="#" class="dropdown-item">Alimentos</a></li>
-              <li><a href="#" class="dropdown-item">Electrodomésticos</a></li>
-              <li><a href="#" class="dropdown-item">Ropa y calzado</a></li>
+        <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                       class="nav-link dropdown-toggle">Categorías</a>
+                    <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
 
-              <li class="dropdown-divider"></li>
+                        <li><a href="#" class="dropdown-item">Alimentos</a></li>
+                        <li><a href="#" class="dropdown-item">Electrodomésticos</a></li>
+                        <li><a href="#" class="dropdown-item">Ropa y calzado</a></li>
 
-              <!-- Level two dropdown-->
-              <li class="dropdown-submenu dropdown-hover">
-                <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Hover for action</a>
-                <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
-                  <li>
-                    <a tabindex="-1" href="#" class="dropdown-item">level 2</a>
-                  </li>
+                        <li class="dropdown-divider"></li>
 
-                  <!-- Level three dropdown-->
-                  <li class="dropdown-submenu">
-                    <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
-                    <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
-                      <li><a href="#" class="dropdown-item">3rd level</a></li>
-                      <li><a href="#" class="dropdown-item">3rd level</a></li>
+                        <!-- Level two dropdown-->
+                        <li class="dropdown-submenu dropdown-hover">
+                            <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                               aria-expanded="false" class="dropdown-item dropdown-toggle">Hover for action</a>
+                            <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+                                <li>
+                                    <a tabindex="-1" href="#" class="dropdown-item">level 2</a>
+                                </li>
+
+                                <!-- Level three dropdown-->
+                                <li class="dropdown-submenu">
+                                    <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown"
+                                       aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level
+                                        2</a>
+                                    <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
+                                        <li><a href="#" class="dropdown-item">3rd level</a></li>
+                                        <li><a href="#" class="dropdown-item">3rd level</a></li>
+                                    </ul>
+                                </li>
+                                <!-- End Level three -->
+
+                                <li><a href="#" class="dropdown-item">level 2</a></li>
+                                <li><a href="#" class="dropdown-item">level 2</a></li>
+                            </ul>
+                        </li>
+                        <!-- End Level two -->
                     </ul>
-                  </li>
-                  <!-- End Level three -->
-
-                  <li><a href="#" class="dropdown-item">level 2</a></li>
-                  <li><a href="#" class="dropdown-item">level 2</a></li>
-                </ul>
-              </li>
-              <!-- End Level two -->
+                </li>
             </ul>
-          </li>
-        </ul>
 
-        <!-- SEARCH FORM -->
-        <form class="form-inline ml-0 ml-md-3">
-          <div class="input-group input-group-sm">
-            <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-            <div class="input-group-append">
-              <button class="btn btn-navbar" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
+            <!-- SEARCH FORM -->
+            <form class="form-inline ml-0 ml-md-3">
+                <div class="input-group input-group-sm">
+                    <input class="form-control form-control-navbar" type="search" placeholder="Search"
+                           aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
 
-      <!-- Right navbar links -->
-      <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-        
-        <!-- cart-shoping -->
-        <li class="nav-item" style="position: relative;">
-          <a class="nav-link" href="{% url 'cart' %}">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: rgba(135, 135, 135, 1);transform: ;msFilter:;">
-                  <path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path>
-                  <circle cx="10.5" cy="19.5" r="1.5"></circle>
-                  <circle cx="17.5" cy="19.5" r="1.5"></circle>
-              </svg>
-          </a>
-          <p id="total-articulos" style="position: absolute; top: -1.5px; right: 7px; background-color: red; color: white; border-radius: 350%; padding: 3px; font-size: 10px;">{{cartArticulos}}</p>
-        </li>
-      
-        <li class="nav-item">
-          {% if user.is_authenticated %}
-          <a href="{% url 'listar_productos' %}" type="button" class="btn btn-secondary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
-              <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 
+        <!-- Right navbar links -->
+        <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+
+            <!-- cart-shoping -->
+            <li class="nav-item" style="position: relative;">
+                <a class="nav-link" href="{% url 'cart' %}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                         style="fill: rgb(213,191,191);transform: ;msFilter:;">
+                        <path d="M21.822 7.431A1 1 0 0 0 21 7H7.333L6.179 4.23A1.994 1.994 0 0 0 4.333 3H2v2h2.333l4.744 11.385A1 1 0 0 0 10 17h8c.417 0 .79-.259.937-.648l3-8a1 1 0 0 0-.115-.921zM17.307 15h-6.64l-2.5-6h11.39l-2.25 6z"></path>
+                        <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                        <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                    </svg>
+                </a>
+                <p id="total-articulos"
+                   style="position: absolute; top: -1.5px; right: 7px; background-color: red; color: white; border-radius: 350%; padding: 3px; font-size: 10px;">{{ cartArticulos }}</p>
+            </li>
+
+            <li class="nav-item">
+
+                <a href="{% url 'listar_productos' %}" type="button" class="btn btn-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-shop" viewBox="0 0 16 16">
+                        <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 
               6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 
               4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 
               0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1
               0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5
               0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z">
-              </path>
-            </svg>
-          </a>
-          {% endif %}
-        </li>
-      </ul>
+                        </path>
+                    </svg>
+                </a>
+
+            </li>
+        </ul>
     </div>
     <ul class="order-2 order-md-3 navbar-nav navbar-no-expand ml-auto">
-      <div class="mr-5">
-        {% if user.is_authenticated %}
-          <i class"bx bx-user"></i>{{request.user.username}}
-          <a href="{% url 'logout' %}" type="button" class="bt">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAM1JREFUSEvdlT0KwkAQRl/OIQhiobcJeA1bG2+gZ9BzeIbUNnaiIHgHG+UDN4ToOsvEVci2M/O9+UlmCjK/IrM+PweUwAqYOis7AAtgF+LbFVyAgVM8hB2BcQxwfxq8rXuJbwv1H7AB5sAtMiezRdZ8JVABM+D6xvkrAOlKXBDBms8EBAerEtnVJrVr23D+P8DKPGToblEKoNOQrR+t82dqAVIqlE+9Ifq3Ks7A0OqDYT8Bo9i61sFZAxMnZA8sPx0cp248zHtYkhPJDngAqgQ2GSwkQI0AAAAASUVORK5CYII="/>
-          </a>
-        {% else %}
-          <a href="{% url 'login' %}" type="button" class="bt">
-            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAepJREFUSEu11UuoSFEUBuDvkphgIKG8ihCFgVAyQiEjjzEppZCipDBBjL1CKY+ZIlEiSYkMiJIByiMGSJJMGHi1tE9tu7Pvqau7Z/usf69/rb3+/Z8e/bx6+jm/LoJBWIllmI2JqaDXeITruIQftUJ7I1iME5jU0eUzbMTtNlyNYBf20dlhk/MntuNQSdJGsAd7+zibLTiany0JluBGH5PHsV+YjwdNjpxgAJ5gegvBF+zE5RRbjQMY2oK9i4VtBKGWi5Xq1+FsEdtUXkcWX4B7sc87uIBVFYKR+FTExuBdBX8YW0uCtxhXOTAKH4vYaLyv4B9iTknwDUMqB9bjdBEL7R+v4D9jREnwtTK0wMWQd6QhhxhiXgcxrEIQuYaXBM8x5T8kmh992qgxH/IZrG0hCG0/xn18SPG4/7mYheioXKewoexgOa4WyOhqBV5UOpuGa5kJNrBFuFUSxD4qnZlQvzEZrzqubSrC8JoVnc5rNqVVBPPNDHwe8ci+V0hCdeewJsXjOuMV/31kbR3Et3DS/VnCNziS/D+sZCBmJJ2HuY3NsJtxLC+mZte7k6N2/ZCaXGHX2xAv+J/VW4KlOInxHTMIIYRi7rThuiocnPwpFBbDn4AY/kuEHYSCriA6aF1dBB3Fd4f7neAPCe1UGWoE11UAAAAASUVORK5CYII="/>
-         </a>
-        {% endif %}
-      </div>
+        <div class="mr-5">
+            {% if user.is_authenticated %}
+                <i class"bx bx-user"></i>{{ request.user.username }}
+                <a href="{% url 'logout' %}" type="button" class="bt">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAM1JREFUSEvdlT0KwkAQRl/OIQhiobcJeA1bG2+gZ9BzeIbUNnaiIHgHG+UDN4ToOsvEVci2M/O9+UlmCjK/IrM+PweUwAqYOis7AAtgF+LbFVyAgVM8hB2BcQxwfxq8rXuJbwv1H7AB5sAtMiezRdZ8JVABM+D6xvkrAOlKXBDBms8EBAerEtnVJrVr23D+P8DKPGToblEKoNOQrR+t82dqAVIqlE+9Ifq3Ks7A0OqDYT8Bo9i61sFZAxMnZA8sPx0cp248zHtYkhPJDngAqgQ2GSwkQI0AAAAASUVORK5CYII="/>
+                </a>
+            {% else %}
+                <a href="{% url 'login' %}" type="button" class="bt">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAepJREFUSEu11UuoSFEUBuDvkphgIKG8ihCFgVAyQiEjjzEppZCipDBBjL1CKY+ZIlEiSYkMiJIByiMGSJJMGHi1tE9tu7Pvqau7Z/usf69/rb3+/Z8e/bx6+jm/LoJBWIllmI2JqaDXeITruIQftUJ7I1iME5jU0eUzbMTtNlyNYBf20dlhk/MntuNQSdJGsAd7+zibLTiany0JluBGH5PHsV+YjwdNjpxgAJ5gegvBF+zE5RRbjQMY2oK9i4VtBKGWi5Xq1+FsEdtUXkcWX4B7sc87uIBVFYKR+FTExuBdBX8YW0uCtxhXOTAKH4vYaLyv4B9iTknwDUMqB9bjdBEL7R+v4D9jREnwtTK0wMWQd6QhhxhiXgcxrEIQuYaXBM8x5T8kmh992qgxH/IZrG0hCG0/xn18SPG4/7mYheioXKewoexgOa4WyOhqBV5UOpuGa5kJNrBFuFUSxD4qnZlQvzEZrzqubSrC8JoVnc5rNqVVBPPNDHwe8ci+V0hCdeewJsXjOuMV/31kbR3Et3DS/VnCNziS/D+sZCBmJJ2HuY3NsJtxLC+mZte7k6N2/ZCaXGHX2xAv+J/VW4KlOInxHTMIIYRi7rThuiocnPwpFBbDn4AY/kuEHYSCriA6aF1dBB3Fd4f7neAPCe1UGWoE11UAAAAASUVORK5CYII="/>
+                </a>
+            {% endif %}
+        </div>
     </ul>
-  </nav>
-  <!-- /.navbar -->
+</nav>
+<!-- /.navbar -->
