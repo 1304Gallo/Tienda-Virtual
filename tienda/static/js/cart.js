@@ -18,7 +18,7 @@ for (var i = 0; i < updateBtns.length; i++ ){
 function actualizarClienteCompra(productoID, action) {
     console.log('Usuario logueado, enviando datos...')
     
-    var url = '/Actualizar_Articulos/'
+    var url = '/actualizar_articulos/'
     
     fetch(url, {
         method: 'POST',

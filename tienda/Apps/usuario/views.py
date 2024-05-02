@@ -45,6 +45,7 @@ class Forgot_PasswordView(PasswordResetView):
 
 logger = logging.getLogger(__name__)
 
+
 class CreateUserFormView(CreateView):
     form_class = CustomUserCreationForm
     template_name = "registration/create_user.html"

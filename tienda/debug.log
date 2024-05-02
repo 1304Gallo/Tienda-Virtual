@@ -1,0 +1,283 @@
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\usuario\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\usuario\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\usuario\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\usuario\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\usuario\views.py changed, reloading.
+Watching for file changes with StatReloader
+Datos del formulario: {'username': 'alex', 'email': 'alex@gmail.com', 'password1': 'Alex9804', 'password2': 'Alex9804'}
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+E:\trabajos\tienda\tienda\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /Actualizar_Articulos/
+Internal Server Error: /Actualizar_Articulos/
+Internal Server Error: /Actualizar_Articulos/
+Internal Server Error: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\usuario\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\usuario\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /Actualizar_Articulos/
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Internal Server Error: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\usuario\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Internal Server Error: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\store\models.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\store\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /Actualizar_Articulos/
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Not Found: /Actualizar_Articulos/
+Not Found: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\store\urls.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\store\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\store\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\store\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\store\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\trabajos\tienda\Apps\store\views.py", line 88, in get
+    cliente = request.user.cliente
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\db\models\fields\related_descriptors.py", line 525, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.cliente.RelatedObjectDoesNotExist: User has no cliente.
+Watching for file changes with StatReloader
+Not Found: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\store\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /Actualizar_Articulos/
+Not Found: /Actualizar_Articulos/
+E:\trabajos\tienda\Apps\store\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /Actualizar_Articulos/
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\trabajos\tienda\Apps\store\views.py", line 88, in get
+    cliente = request.user.cliente
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\utils\functional.py", line 253, in inner
+    return func(_wrapped, *args)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\db\models\fields\related_descriptors.py", line 525, in __get__
+    raise self.RelatedObjectDoesNotExist(
+django.contrib.auth.models.User.cliente.RelatedObjectDoesNotExist: User has no cliente.
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\trabajos\tienda\Apps\store\views.py", line 100, in get
+    context = {'articulos': articulos, 'compra': compra, 'cartArticulos': cartArticulos}
+                                                                          ^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'cartArticulos' where it is not associated with a value
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapper_view
+    if test_func(request.user):
+                 ^^^^^^^^^^^^
+AttributeError: 'SheckoutView' object has no attribute 'user'
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapper_view
+    if test_func(request.user):
+                 ^^^^^^^^^^^^
+AttributeError: 'SheckoutView' object has no attribute 'user'
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapper_view
+    if test_func(request.user):
+                 ^^^^^^^^^^^^
+AttributeError: 'SheckoutView' object has no attribute 'user'
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\contrib\auth\decorators.py", line 22, in _wrapper_view
+    if test_func(request.user):
+                 ^^^^^^^^^^^^
+AttributeError: 'SheckoutView' object has no attribute 'user'
+Not Found: /actualizar_articulos/
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+E:\trabajos\tienda\Apps\store\views.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /actualizar_articulos/
+Internal Server Error: /cart/
+Traceback (most recent call last):
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\views\generic\base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\contrib\auth\mixins.py", line 72, in dispatch
+    return self.handle_no_permission()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\contrib\auth\mixins.py", line 51, in handle_no_permission
+    resolved_login_url = resolve_url(self.get_login_url())
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Alex\AppData\Roaming\Python\Python312\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'usuario' not found. 'usuario' is not a valid view function or pattern name.
+Not Found: /actualizar_articulos/
+E:\trabajos\tienda\Apps\store\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /actualizar_articulos/
+E:\trabajos\tienda\Apps\store\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /actualizar_articulos/
+E:\trabajos\tienda\Apps\store\urls.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /actualizar_articulos/
+Method Not Allowed (GET): /actualizar_articulos/
+Watching for file changes with StatReloader
+Not Found: /actualizar_articulos/
+E:\trabajos\tienda\tienda\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /actualizar_articulos/
+Not Found: /actualizar_articulos/
+E:\trabajos\tienda\tienda\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /actualizar_articulos/
+Not Found: /actualizar_articulos/
+Not Found: /actualizar_articulos/
+Watching for file changes with StatReloader
+Not Found: /actualizar_articulos/

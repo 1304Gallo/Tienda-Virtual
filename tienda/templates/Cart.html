@@ -4,103 +4,102 @@
 
 {% block content %}
 
-<section class="content-header">
-    <div class="container-fluid">
-      <div class="row mb-2">
-        <div class="col-sm-6 align-items-center">
-          
-            <a href ="{% url 'store' %}">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOlJREFUSEvtlEEKwjAQRf9gvYGFulfwDCJ4C8GlCF14GXHbiIdR8A5uXDYo3qC2kRQLVWszKc2uXZbw3p9PJgTHHznmoxMYG2ZX5G9U4D2xlBFtjdTSAZYghyc4AhgDCKUgwZUYBRreS3AiYATCNc0wve/p1orgC35JM8xt4DrE3wmClfLh4fxOfiFgFkf04CYvzlUKNJy8vPMJCI3hlRN8wC3iSkGVYX9+Ohfo0E4rKlppS1K7B23cJNtFs94Fo0BXVn4qCFjHgg7cC8YSaNggVMO+wkIK2nHhtZtsA6k7y56gqbATGJt7AT6OVxkAYTRSAAAAAElFTkSuQmCC"/>
-                 Seguir comprando</h5>
-            </a>
-            <h2>
-              <i class="fas fa-barcode"></i>
-              Listado de compra
-          </h2>
-        </div>            
-      </div>
-    </div>
-  </section>
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6 align-items-center">
 
-  <section class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-12">            
-            <div class="card">
-              <div class="card-header d-flex justify-content-between align-items-center">
-               
-                <h4>
-                  Articulos: {{compra.get_cart_articulo}}
-              </h4>
-                <h4>
-                  Total a pagar: $ {{compra.get_cart_total}}
-              </h4>
-              
-                
-
-                <a href="{% url 'checkout' %}" class="btn btn-primary btn-flat rounded-pill"><i class="bi bi-plus-lg">
-                  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAN1JREFUSEvdljEOgkAQRf8/AhZsYWJiLPQ2XsbGG+iFPIiNndHEgq24gWsgLMHFZZnVDYnUM//9+QMTiMQPE+vDCyiKcgvwQJqNxATJC/Dc5fnsVPV5AVqXDwBziXin9qpUtgoBTKR43aZUVpsfmmA6gHWndek18dUEUQDrRtIsmiAEsGDf4l1YL6LJAV3nkhjb1zQ0wX8Bxnzh4iWPEf0U49AO7gAWUuGm/qZUtny7Re6Sq3NNmiPAtRByJs2+d65dgFDUW+6NKAUgKvPQCWkniM18NOBXkbg6yf8qXnD4oxk20eWaAAAAAElFTkSuQmCC"/>
-                </i> Checkout</a>
-
+                    <a href="{% url 'store' %}">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOlJREFUSEvtlEEKwjAQRf9gvYGFulfwDCJ4C8GlCF14GXHbiIdR8A5uXDYo3qC2kRQLVWszKc2uXZbw3p9PJgTHHznmoxMYG2ZX5G9U4D2xlBFtjdTSAZYghyc4AhgDCKUgwZUYBRreS3AiYATCNc0wve/p1orgC35JM8xt4DrE3wmClfLh4fxOfiFgFkf04CYvzlUKNJy8vPMJCI3hlRN8wC3iSkGVYX9+Ohfo0E4rKlppS1K7B23cJNtFs94Fo0BXVn4qCFjHgg7cC8YSaNggVMO+wkIK2nHhtZtsA6k7y56gqbATGJt7AT6OVxkAYTRSAAAAAElFTkSuQmCC"/>
+                        Seguir comprando</h5>
+                    </a>
+                    <h2>
+                        <i class="fas fa-barcode"></i>
+                        Listado de compra
+                    </h2>
+                </div>
             </div>
-              
-              <!-- /.card-header -->
-              <div class="card-body">
-                <table id="example1" class="table table-bordered ">
-                  
-                  <thead>
-                    <tr>
-                        <th></th>
-                        <th class="text-center">Producto</th>
-                        <th class="text-center">Cantidad</th>
-                        <th class="text-center">Precio</th>
-                        <th class="text-center">Total</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                      
-                      {% for articulo in articulos %}
-                        <tr>
-                          <td class="text-center"><img src="{{ articulo.productos.foto.url }}" class="card-img-top mx-auto " style="max-width: 80px; max-height: 50px;" alt="..."></td>
-                            <td class="text-center col-3" >{{ articulo.productos.nombre }}</td>
-                            <td class="text-center col-1">
-                              <button data-producto="{{ articulo.productos.id }}"  data-action="decrement" class="update-cart">-</button>
-                              <span id="cantidad-{{ articulo.productos.id }}">{{ articulo.cantidad }}</span>
-                              <button data-producto="{{ articulo.productos.id }}"  data-action="add" class="update-cart">+</button>
-                            </td>
-                            
-                            <td class="text-center col-1">$ {{ articulo.productos.precio }}</td>
-                            
-                            <td class="text-center col-1">$ {{ articulo.get_total }}</td>
-                            <td>
-                            <!-- Cart.html -->
-                            <button class="update-cart" data-producto="{{ articulo.productos.id }}" data-action="remove">Eliminar</button>
-                            </td/>
-                        </tr>
-                      {% endfor %}
-                     
-                      </tbody>
-              
-                  </tbody>
-                  
-                  <tfoot>
-                      
-                  
-                  </tfoot>
-                </table>
-                
-              </div>
-              <!-- /.card-body -->
-            </div>
-            <!-- /.card -->
-          </div>
-          <!-- /.col -->
         </div>
-        <!-- /.row -->
-      </div>
+    </section>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between align-items-center">
+
+                            <h4>
+                                Articulos: {{ compra.get_cart_articulo }}
+                            </h4>
+                            <h4>
+                                Total a pagar: $ {{ compra.get_cart_total }}
+                            </h4>
+
+
+                            <a href="{% url 'checkout' %}" class="btn btn-primary btn-flat rounded-pill"><i
+                                    class="bi bi-plus-lg">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAN1JREFUSEvdljEOgkAQRf8/AhZsYWJiLPQ2XsbGG+iFPIiNndHEgq24gWsgLMHFZZnVDYnUM//9+QMTiMQPE+vDCyiKcgvwQJqNxATJC/Dc5fnsVPV5AVqXDwBziXin9qpUtgoBTKR43aZUVpsfmmA6gHWndek18dUEUQDrRtIsmiAEsGDf4l1YL6LJAV3nkhjb1zQ0wX8Bxnzh4iWPEf0U49AO7gAWUuGm/qZUtny7Re6Sq3NNmiPAtRByJs2+d65dgFDUW+6NKAUgKvPQCWkniM18NOBXkbg6yf8qXnD4oxk20eWaAAAAAElFTkSuQmCC"/>
+                            </i> Checkout</a>
+
+                        </div>
+
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example1" class="table table-bordered ">
+
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center">Producto</th>
+                                    <th class="text-center">Cantidad</th>
+                                    <th class="text-center">Precio</th>
+                                    <th class="text-center">Total</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for articulo in articulos %}
+                                    <tr>
+                                        <td class="text-center"><img src="{{ articulo.productos.foto.url }}"
+                                                                     class="card-img-top mx-auto "
+                                                                     style="max-width: 80px; max-height: 50px;"
+                                                                     alt="..."></td>
+                                        <td class="text-center col-3">{{ articulo.productos.nombre }}</td>
+                                        <td class="text-center col-1">
+                                            <button data-producto="{{ articulo.productos.id }}" data-action="decrement"
+                                                    class="update-cart">-
+                                            </button>
+                                            <span id="cantidad-{{ articulo.productos.id }}">{{ articulo.cantidad }}</span>
+                                            <button data-producto="{{ articulo.productos.id }}" data-action="add"
+                                                    class="update-cart">+
+                                            </button>
+                                        </td>
+
+                                        <td class="text-center col-1">$ {{ articulo.productos.precio }}</td>
+
+                                        <td class="text-center col-1">$ {{ articulo.get_total }}</td>
+                                        <td>
+                                            <button class="update-cart" data-producto="{{ articulo.productos.id }}"
+                                                    data-action="remove">Eliminar
+                                            </button>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
         <!-- /.container-fluid -->
-  </section>
-</section>
+    </section>
+
 
 {% endblock %}
 

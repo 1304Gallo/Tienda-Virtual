@@ -8,6 +8,6 @@ urlpatterns = [
     path('checkout/', SheckoutView.as_view(), name='checkout'),
 
     
-    path('Actualizar_Articulos/', actualizar_articulos, name='Actualizar_Articulos'), 
+    path('actualizar_articulos/', actualizar_articulos, name='actualizar_articulos'),
     
 ]

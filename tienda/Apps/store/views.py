@@ -1,9 +1,10 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views import View
 from django.shortcuts import render, redirect
 from django.http import JsonResponse
 from Apps.almacen.models import Producto
 from .models import *
-from django.http import request
 from django.views.decorators.http import require_POST
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -48,7 +49,7 @@ def StoreView(request):
         cartArticulos = ArticulosCompra.objects.filter(compra=compra).count()
 
 
-class CartView(View):
+class CartView(LoginRequiredMixin, View):
     def get(self, request):
 
         articulos = []
@@ -82,19 +83,23 @@ class CartView(View):
         return render(request, 'Cart.html', context)
 
 
-class SheckoutView(View):
+class SheckoutView(LoginRequiredMixin, View):
     def get(self, request):
-        if request.user.is_authenticated:
-            cliente = request.user.cliente
-            compra, created = Compra.objects.get_or_create(Cliente=cliente, complete=False)
-            articulos = compra.articuloscompra_set.all()
-            cartArticulos = ArticulosCompra.objects.filter(compra=compra).count()
+        articulos = []
+        cartArticulos = 0
+        compra = {'get_cart_articulo': 0, 'get_cart_total': 0}
 
-            for articulo in articulos:
-                articulo.total = articulo.productos.precio * articulo.cantidad
-        else:
-            articulos = []
-            compra = {'get_cart_articulo': 0, 'get_cart_total': 0}
+        if request.user.is_authenticated:
+            if hasattr(request.user, 'cliente'):
+                cliente = request.user.cliente
+                compra, created = Compra.objects.get_or_create(Cliente=cliente, complete=False)
+                articulos = compra.articuloscompra_set.all()
+                cartArticulos = ArticulosCompra.objects.filter(compra=compra).count()
+
+                for articulo in articulos:
+                    articulo.total = articulo.productos.precio * articulo.cantidad
+            else:
+                pass
 
         context = {'articulos': articulos, 'compra': compra, 'cartArticulos': cartArticulos}
         return render(request, 'Checkout.html', context)
@@ -123,6 +128,9 @@ def actualizar_articulos(request):
 
         if action == 'add':
             articulo_compra.cantidad += 1
+            total_articulos = ArticulosCompra.objects.filter(compra=compra).count()
+            return JsonResponse({'nueva_cantidad': articulo_compra.cantidad, 'total_articulos': total_articulos},
+                                safe=False)
 
         elif action == 'remove':
             # Lógica para eliminar un producto del carrito
